@@ -1,8 +1,10 @@
 ﻿
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+
 }
+
+@model List<Products>
 
 <!--Home Start-->
 <section class="slider-sec" id="slider-sec">
@@ -329,156 +331,36 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 text-center wow slideInUp">
-                <div class="featured-item-card">
-                    <div class="item-img">
-                        <img src="vendor/img/oranges-1995056_640.jpg">
-                        <div class="item-overlay">
-                            <div class="item-btns">
-                                <a href="#" class="btn btn-view"><i class="las la-shopping-bag"></i></a>
-                                <a href="#" class="btn btn-view"><i class="las la-heart"></i></a>
-                                <a href="/product-detail.html" class="btn btn-view"><i class="las la-plus"></i></a>
+            @foreach (var item in Model)
+            {
+                <div class="col-12 col-md-6 col-lg-4 text-center wow slideInUp">
+                    <div class="featured-item-card">
+                        <div class="item-img">
+                            <img src="vendor/img/@item.ImageUrl">
+                            <div class="item-overlay">
+                                <div class="item-btns">
+                                    <a href="#" class="btn btn-view"><i class="las la-shopping-bag"></i></a>
+                                    <a href="#" class="btn btn-view"><i class="las la-heart"></i></a>
+                                    <a href="~/product-detail.html" class="btn btn-view"><i class="las la-plus"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="item-detail">
-                        <h4 class="item-name">Oranges</h4>
-                        <ul class="reviews">
-                            <li><i class="las la-star"></i></li>
-                            <li><i class="las la-star"></i></li>
-                            <li><i class="las la-star"></i></li>
-                            <li><i class="las la-star"></i></li>
-                            <li><i class="las la-star"></i></li>
-                        </ul>
-                        <p class="item-price">$20</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 text-center wow slideInUp">
-                <div class="featured-item-card">
-                    <div class="item-img">
-                        <img src="vendor/img/wines-1761613_640.jpg">
-                        <div class="item-overlay">
-                            <div class="item-btns">
-                                <a href="#" class="btn btn-view"><i class="las la-shopping-bag"></i></a>
-                                <a href="#" class="btn btn-view"><i class="las la-heart"></i></a>
-                                <a href="/product-detail.html" class="btn btn-view"><i class="las la-plus"></i></a>
-                            </div>
+                        <div class="item-detail">
+                            <h4 class="item-name">@item.Name</h4>
+                            <ul class="reviews">
+                                <li><i class="las la-star"></i></li>
+                                <li><i class="las la-star"></i></li>
+                                <li><i class="las la-star"></i></li>
+                                <li><i class="las la-star"></i></li>
+                                <li><i class="las la-star"></i></li>
+                            </ul>
+                            <p class="item-price">$@item.Price</p>
                         </div>
                     </div>
-                    <div class="item-detail">
-                        <h4 class="item-name">Grapes</h4>
-                        <ul class="reviews">
-                            <li><i class="las la-star"></i></li>
-                            <li><i class="las la-star"></i></li>
-                            <li><i class="las la-star"></i></li>
-                            <li><i class="las la-star"></i></li>
-                            <li><i class="las la-star"></i></li>
-                        </ul>
-                        <p class="item-price">$30</p>
-                    </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 text-center wow slideInUp">
-                <div class="featured-item-card">
-                    <div class="item-img">
-                        <img src="vendor/img/banana-2181470_640.jpg">
-                        <div class="item-overlay">
-                            <div class="item-btns">
-                                <a href="#" class="btn btn-view"><i class="las la-shopping-bag"></i></a>
-                                <a href="#" class="btn btn-view"><i class="las la-heart"></i></a>
-                                <a href="/product-detail.html" class="btn btn-view"><i class="las la-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-detail">
-                        <h4 class="item-name">Bananas</h4>
-                        <ul class="reviews">
-                            <li><i class="las la-star"></i></li>
-                            <li><i class="las la-star"></i></li>
-                            <li><i class="las la-star"></i></li>
-                            <li><i class="las la-star"></i></li>
-                            <li><i class="las la-star"></i></li>
-                        </ul>
-                        <p class="item-price">$40</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 text-center wow slideInUp">
-                <div class="featured-item-card">
-                    <div class="item-img">
-                        <img src="vendor/img/kiwi-coctail-1447939_640.jpg">
-                        <div class="item-overlay">
-                            <div class="item-btns">
-                                <a href="#" class="btn btn-view"><i class="las la-shopping-bag"></i></a>
-                                <a href="#" class="btn btn-view"><i class="las la-heart"></i></a>
-                                <a href="/product-detail.html" class="btn btn-view"><i class="las la-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-detail">
-                        <h4 class="item-name">Kiwi</h4>
-                        <ul class="reviews">
-                            <li><i class="las la-star"></i></li>
-                            <li><i class="las la-star"></i></li>
-                            <li><i class="las la-star"></i></li>
-                            <li><i class="las la-star"></i></li>
-                            <li><i class="las la-star"></i></li>
-                        </ul>
-                        <p class="item-price">$10</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 text-center wow slideInUp">
-                <div class="featured-item-card">
-                    <div class="item-img">
-                        <img src="vendor/img/strawberries-3359755_640.jpg">
-                        <div class="item-overlay">
-                            <div class="item-btns">
-                                <a href="#" class="btn btn-view"><i class="las la-shopping-bag"></i></a>
-                                <a href="#" class="btn btn-view"><i class="las la-heart"></i></a>
-                                <a href="/product-detail.html" class="btn btn-view"><i class="las la-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-detail">
-                        <h4 class="item-name">Strawberries</h4>
-                        <ul class="reviews">
-                            <li><i class="las la-star"></i></li>
-                            <li><i class="las la-star"></i></li>
-                            <li><i class="las la-star"></i></li>
-                            <li><i class="las la-star"></i></li>
-                            <li><i class="las la-star"></i></li>
-                        </ul>
-                        <p class="item-price">$20</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 text-center wow slideInUp">
-                <div class="featured-item-card">
-                    <div class="item-img">
-                        <img src="vendor/img/cherries-3522365_640.jpg">
-                        <div class="item-overlay">
-                            <div class="item-btns">
-                                <a href="#" class="btn btn-view"><i class="las la-shopping-bag"></i></a>
-                                <a href="#" class="btn btn-view"><i class="las la-heart"></i></a>
-                                <a href="/product-detail.html" class="btn btn-view"><i class="las la-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-detail">
-                        <h4 class="item-name">Cherries</h4>
-                        <ul class="reviews">
-                            <li><i class="las la-star"></i></li>
-                            <li><i class="las la-star"></i></li>
-                            <li><i class="las la-star"></i></li>
-                            <li><i class="las la-star"></i></li>
-                            <li><i class="las la-star"></i></li>
-                        </ul>
-                        <p class="item-price">$30</p>
-                    </div>
-                </div>
-            </div>
+            }
+
+
         </div>
         <div class="row">
             <div class="col-12 text-center mt-5">

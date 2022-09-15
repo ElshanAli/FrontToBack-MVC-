@@ -4,6 +4,8 @@
     Layout = "~/Views/Shared/_Layout1Contact.cshtml";
 }
 
+@model List<Products>
+
 <!--slider sec strat-->
 <section id="slider-sec" class="slider-sec parallax" style="background: url('~/img/blogs/s-blog-slider.jpg');">
     <div class="overlay text-center d-flex justify-content-center align-items-center">
@@ -28,42 +30,23 @@
             <div class="row">
                 <div class="col-12 col-lg-8 order-1">
                     <div class="main_content text-center text-lg-left">
-                        <div class="single_blog">
-                            <div class="single_img">
-                                <img src="~/vendor/img/wines-1761613_640.jpg" alt="image" />
+                        @foreach (var item in Model)
+                        {
+                            <div class="single_blog">
+                                <div class="single_img">
+                                    <img src="~/vendor/img/@item.ImageUrl" alt="image" />
+                                </div>
+                                <div class="single_detail">
+                                    <p class="blog-sub-heading text-center"><span></span>Most flexible one page</p>
+                                    <h2>Post With A Preview Images</h2>
+                                    <span class="blog-text"><a href="#">JUNE 24, 2019</a> | BY <a href="#">MARK ANDERSON</a> | <a href="#">PHOTOGRAPHY</a>, <a href="#">MUSIC</a></span>
+                                    <p class="p-text">Nam ut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis...</p>
+                                    <a class="btn web-btn rounded-pill" href="single-blog.html">READ MORE</a>
+                                </div>
                             </div>
-                            <div class="single_detail">
-                                <p class="blog-sub-heading text-center"><span></span>Most flexible one page</p>
-                                <h2>Post With A Preview Images</h2>
-                                <span class="blog-text"><a href="#">JUNE 24, 2019</a> | BY <a href="#">MARK ANDERSON</a> | <a href="#">PHOTOGRAPHY</a>, <a href="#">MUSIC</a></span>
-                                <p class="p-text">Nam ut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis...</p>
-                                <a class="btn web-btn rounded-pill" href="single-blog.html">READ MORE</a>
-                            </div>
-                        </div>
-                        <div class="single_blog">
-                            <div class="single_img">
-                                <img src="~/vendor/img/kiwi-coctail-1447939_640.jpg" alt="image" />
-                            </div>
-                            <div class="single_detail">
-                                <p class="blog-sub-heading text-center"><span></span>Most flexible one page</p>
-                                <h2>Post With A Preview Images</h2>
-                                <span class="blog-text"><a href="#">JUNE 24, 2019</a> | BY <a href="#">MARK ANDERSON</a> | <a href="#">PHOTOGRAPHY</a>, <a href="#">MUSIC</a></span>
-                                <p class="p-text">Nam ut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis...</p>
-                                <a class="btn web-btn rounded-pill" href="single-blog.html">READ MORE</a>
-                            </div>
-                        </div>
-                        <div class="single_blog">
-                            <div class="single_img">
-                                <img src="~/vendor/img/strawberries-3359755_640.jpg" alt="image" />
-                            </div>
-                            <div class="single_detail">
-                                <p class="blog-sub-heading text-center"><span></span>Most flexible one page</p>
-                                <h2>Post With A Preview Images</h2>
-                                <span class="blog-text"><a href="#">JUNE 24, 2019</a> | BY <a href="#">MARK ANDERSON</a> | <a href="#">PHOTOGRAPHY</a>, <a href="#">MUSIC</a></span>
-                                <p class="p-text">Nam ut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis...</p>
-                                <a class="btn web-btn rounded-pill" href="single-blog.html">READ MORE</a>
-                            </div>
-                        </div>
+                        }
+
+
                     </div>
                     <nav aria-label="Page navigation example">
                         <ul class="pagination justify-content-center justify-content-lg-start">

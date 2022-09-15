@@ -14,13 +14,13 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "D:\This PC\FrontToBack\Views\_ViewImports.cshtml"
-using FrontToBack;
+using FrontToBack.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ccc4471e299afd21e0d5e599fa462d5232032e8b", @"/Views/AboutUs/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9b0015d38b8cab8360f1ab82ea66f616154baf01", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0675e033b055e33784b900933a3c52e25178b25d", @"/Views/_ViewImports.cshtml")]
     public class Views_AboutUs_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #line hidden
@@ -237,7 +237,7 @@ using FrontToBack;
             </div>
             <div class=""col-12 col-md-8"">
                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ccc4471e299afd21e0d5e599fa462d5232032e8b12863", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ccc4471e299afd21e0d5e599fa462d5232032e8b12870", async() => {
                 WriteLiteral("\r\n                    <div class=\"input-group\">\r\n                        <input class=\"form-control\" placeholder=\"Enter Email\">\r\n                        <a href=\"#\" class=\"btn news-btn\">Subscribe</a>\r\n                    </div>\r\n                ");
             }
             );
